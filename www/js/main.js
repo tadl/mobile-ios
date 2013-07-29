@@ -25,10 +25,10 @@ $(document).ready(function() {
         if (event.keyCode == 13) { login(); }
     });
     $('#search').click(getResults);
-    $(document).on('focus', 'input, textarea', function() {
-        $('header').css('position', 'static');
+    $(document).on('focus', 'input', function() {
+        $('header').css('position', 'absolute');
     });
-    $(document).on('blur', 'input, textarea', function() {
+    $(document).on('blur', 'input', function() {
         setTimeout(function() {
             $('header').css('position', 'fixed');
             $('body').css('height', '+=1').css('height', '-=1');
