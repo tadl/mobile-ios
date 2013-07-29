@@ -32,7 +32,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $('header').css('position', 'fixed');
             $('body').css('height', '+=1').css('height', '-=1');
-        }, 10);
+        }, 100);
     });
 });
 
