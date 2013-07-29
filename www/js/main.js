@@ -16,7 +16,6 @@ var pagecount = {}
 var state = {}
 
 $(document).ready(function() {
-    router.perform();
     $('#term').keydown(function(event) {
         if (event.keyCode == 13) { getResults(); }
     });
