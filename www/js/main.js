@@ -25,7 +25,6 @@ $(document).ready(function() {
         if (event.keyCode == 13) { login(); }
     });
     $('#search').click(getResults);
-    /*
     $(document).on('focus', 'input', function() {
         $('header').css('position', 'absolute');
     });
@@ -33,9 +32,8 @@ $(document).ready(function() {
         setTimeout(function() {
             $('header').css('position', 'fixed');
             $('body').css('height', '+=1').css('height', '-=1');
-        }, 100);
+        }, 10);
     });
-    */
 });
 
 function checkstatus() {
