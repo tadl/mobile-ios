@@ -10,12 +10,14 @@ var loadingmoreText = '<span class="loadmore"><img style="margin-right: 10px; ma
 var logoutText = '<span class="loadmore"><img style="margin-right: 10px; margin-left: 10px;" src="img/ajax-loader-2.gif">LOGGING OUT...</span>';
 var loadmoreText = '<a class="loadmore button" onclick="loadmore();">LOAD MORE RESULTS</a>';
 var psTitle = "TADL Mobile | ";
-var platform = 'android';
-var version_id = '3';
+var platform = 'ios';
+var version_id = '0';
 var pagecount = {}
 var state = {}
 
 $(document).ready(function() {
+    showmain();
+    checkstatus();
     $('#term').keydown(function(event) {
         if (event.keyCode == 13) { getResults(); }
     });
