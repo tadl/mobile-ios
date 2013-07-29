@@ -147,6 +147,7 @@ input[type="checkbox"] {
     text-decoration:none;
     color:#33B5E5;
     font-size:0.8em;
+    margin-bottom:20px;
 }
 
 .actionlink {
