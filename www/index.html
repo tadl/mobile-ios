@@ -51,9 +51,6 @@ router
 </script>	
 
    <script>
-    document.addEventListener("deviceready", function() {
-        // before this event, window.open likely won't work properly
-    }, false);
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackKeyDown, false);
