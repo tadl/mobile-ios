@@ -108,7 +108,7 @@ input[type="checkbox"] {
     z-index:1;
     position:relative;
     margin-top:7px;
-    margin-bottom:50px;
+    margin-bottom:80px;
     margin-left:7px;
     margin-right:7px;
     padding:2px;
@@ -129,7 +129,6 @@ input[type="checkbox"] {
 #results {
     overflow:auto;
     margin-top:10px;
-    margin-bottom:30px;
 }
 
 #loadmoreanimation img {
