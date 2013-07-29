@@ -130,9 +130,9 @@ input[type="checkbox"] {
 .load_more img {margin-left:20px;}
 
 #results {
-    -webkit-overflow-scrolling:touch;
     overflow:auto;
     margin-top:10px;
+    margin-bottom:20px;
 }
 
 #loadmoreanimation img {
@@ -147,7 +147,6 @@ input[type="checkbox"] {
     text-decoration:none;
     color:#33B5E5;
     font-size:0.8em;
-    margin-bottom:20px;
 }
 
 .actionlink {
