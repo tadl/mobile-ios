@@ -19,7 +19,7 @@ $(document).ready(function() {
     showmain();
     checkstatus();
     $('#term').keydown(function(event) {
-        if (event.keyCode == 13) { getResults(); }
+        if (event.keyCode == 13) { $('#term').blur(); getResults(); }
     });
     $('#login_form').keydown(function(event) {
         if (event.keyCode == 13) { login(); }
