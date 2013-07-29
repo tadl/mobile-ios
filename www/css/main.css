@@ -124,11 +124,16 @@ input[type="checkbox"] {
 .load_more a:visited {text-decoration:none; color:#000;}
 .load_more a:hover {text-decoration:none; font-weight:bold;}
 .load_more a:active {text-decoration:none;}
-.load_more img {margin-left:20px;margin-bottom:35px;}
+.load_more img {margin-left:20px;}
 
 #results {
     overflow:auto;
     margin-top:10px;
+}
+
+#loadmoretext {
+    margin-bottom:35px;
+    padding-bottom:55px;
 }
 
 #loadmoreanimation img {
