@@ -18,8 +18,8 @@
  under the License.
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "org.tadl.tadl"
-        version   = "0.9.0">
+        id        = "io.cordova.helloCordova"
+        version   = "2.0.0">
     <name>TADL Mobile</name>
 
     <description>

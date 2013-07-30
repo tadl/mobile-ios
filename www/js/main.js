@@ -475,6 +475,7 @@ function showcard() {
 
 function showevents() { 
     cleanhouse();
+    $(window).scrollTop(0);
     var action = {action:"showevents"}
     History.pushState(action, "Upcoming Event", "events"); 
     state = History.getState();
@@ -492,6 +493,7 @@ function showevents() {
 
 function showlocations() { 
     cleanhouse();
+    $(window).scrollTop(0);
     var action = {action:"showlocations"}
     History.pushState(action, "Locations", "locations"); 
     state = History.getState();
@@ -509,17 +511,19 @@ function showlocations() {
 
 function showmain() {
     cleanhouse();
+    $(window).scrollTop(0);
     $('#results').html('<div id="mainpage"><div class="mainlogo"><img class="homelogo" src="img/clean-logo-header.png" alt="" /></div><div class="clearfix"></div><div class="mainlinks"></div><div class="clearfix"></div></div>');
     var action = {action:"showmain"}
     History.pushState(action,  psTitle + "Search and Explore", "");
     state = History.getState();
-    $('.mainlinks').html('<a onclick="showfeatured();" class="button">Featured</a><br/><a onclick="showlocations();" class="button">Locations</a><br/><a onclick="showevents();" class="button">Events</a><br/><a onclick="facebookfeed();" class="button">Facebook</a><br/><a class="button" href="http://www.tadl.org/?nomobi=true">Full Site</a>');
+    $('.mainlinks').html('<a onclick="showfeatured();" class="button">Featured</a><br/><a onclick="showlocations();" class="button">Locations</a><br/><a onclick="showevents();" class="button">Events</a><br/><a onclick="facebookfeed();" class="button">Facebook</a><br/><a class="button" href="http://www.tadl.org/?nomobi=true" target="_system">Full Site</a>');
     $('#results').show();
     setTimeout(login,1000);
 }
 
 function facebookfeed() { 
     cleanhouse();
+    $(window).scrollTop(0);
     var action = {action:"facebookfeed"}
     History.pushState(action, "Facebook Feed", "facebook"); 
     state = History.getState();
@@ -548,9 +552,9 @@ function linkify(inputText, options) {
     this.options = $.extend(this.options, options);
     inputText = inputText.replace(/\u200B/g, "");
     var replacePattern1 = /(src="|href="|">|\s>)?(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;ï]*[-A-Z0-9+&@#\/%=~_|ï]/gim;
-    var replacedText = inputText.replace(replacePattern1, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" onclick="try { navigator.app.loadUrl(\'' + $0 + '?nomobi=true\', {openExternal: true}); } finally { window.location = \'' + $0 + '?nomobi=true\'; }"' + (this.options.targetBlank?'target="_blank"':'') + '>'+ $0.trunc(32) + '</a>';});
+    var replacedText = inputText.replace(replacePattern1, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="' + $0 + '?nomobi=true" target="_system">'+ $0.trunc(32) + '</a>';});
     var replacePattern2 = /(src="|href="|">|\s>|https?:\/\/|ftp:\/\/)?www\.[-A-Z0-9+&@#\/%?=~_|!:,.;ï]*[-A-Z0-9+&@#\/%=~_|ï]/gim;
-    var replacedText = replacedText.replace(replacePattern2, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" onclick="try { navigator.app.loadUrl(\'http://' + $0 + '?nomobi=true\', {openExternal: true}); } finally { window.location = \'http://' + $0 + '?nomobi=true\'; }"' + (this.options.targetBlank?'target="_blank"':'') + '>'+ $0.trunc(32) + '</a>';});
+    var replacedText = replacedText.replace(replacePattern2, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="http://' + $0 + '?nomobi=true" target="_system">'+ $0.trunc(32) + '</a>';});
     return replacedText;
 }
 
@@ -619,7 +623,7 @@ function hidemenu() {
 
 function cleanhouse() {
     hidemenu();
-    $('#results').html("");
+    $('#results').empty();
     $("#login_form").slideUp("fast");
     $("#search_options").slideUp("fast");
     $('#search-params').empty();

@@ -129,10 +129,11 @@ input[type="checkbox"] {
 #results {
     overflow:auto;
     margin-top:10px;
+    margin-bottom:35px;
 }
 
 #loadmoretext {
-    margin-bottom:35px;
+    margin-bottom:55px;
     padding-bottom:55px;
 }
 

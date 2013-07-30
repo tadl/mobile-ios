@@ -57,8 +57,10 @@ router
         var state = History.getState();
         $('#results').hide();
         if (state.data.action === "showmain") {
-            navigator.app.exitApp();
-        } else {   
+// this is used for android, but not iOS:
+//            navigator.app.exitApp();
+            showmain();
+        } else {
             History.back();
         }
     }
@@ -138,7 +140,9 @@ router
         <div style="width:100%;">
             <button id="account" class="bigger right icon" onclick="openForm()"><img src="img/account-button.png" alt="" width="25" height="25" /></button>
             <a onclick="loadmenu()" class="panel"><img class="left logo pointer" src="img/tinylines.png" width="30" height="30" alt="" /></a>
+            <form>
             <input class="search_box left" type="text" placeholder="Search..." id="term" autocorrect="off" autocapitalize="off" />
+            <input type="submit" value="Go" style="display:none;" />
             <button id="search" class="left biggerer">GO</button>
             <button id="ssettings" class="left bigger" onclick="openSearch_options()"><img src="img/settings-gear-black.png" alt="" width="25" height="25" /></button>
         </div>
@@ -164,6 +168,7 @@ router
                 <option value="28">EAST BAY</option>
             </select>
         </div>
+        </form>
     </section>
   
     <div id="login_form">
@@ -452,9 +457,11 @@ router
     <div id="loadmoretext"></div>
 </div>
 
+<div style="width:100%;min-height:35px;"></div>
+
 <footer class="holo-actionBar smallfoot">
-    <div class="left" style="padding:2px 0px 0px 5px;margin:0;"><img src="img/back.png" alt="" width="30" height="30" onclick="window.history.back();" /></div>
-    <div class="right" style="padding:2px 5px 0px 0px;margin:0;"><img src="img/home.png" alt="" width="30" height="30"  onclick="showmain();" /></div>
+    <div class="left" style="padding:2px 0px 0px 5px;margin:0;min-width:50px;" onclick="onBackKeyDown();"><img src="img/back.png" alt="" width="30" height="30" /></div>
+    <div class="right" style="padding:2px 5px 0px 0px;margin:0;min-width:50px;" onclick="showmain();"><img src="img/home.png" alt="" width="30" height="30" style="float:right;" /></div>
 </footer>
 
 </body>
