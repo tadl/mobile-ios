@@ -49,6 +49,9 @@
 		73F8275117A9AFF400CC48F2 /* logo-icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275017A9AFF400CC48F2 /* logo-icon-57x57.png */; };
 		73F8275317A9B06A00CC48F2 /* logo-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275217A9B06A00CC48F2 /* logo-icon-144x144.png */; };
 		73F8275517A9B07000CC48F2 /* logo-icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275417A9B07000CC48F2 /* logo-icon-72x72.png */; };
+		73F8275717A9B4BD00CC48F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275617A9B4BD00CC48F2 /* Default@2x.png */; };
+		73F8275917A9B4C800CC48F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275817A9B4C800CC48F2 /* Default-568h@2x.png */; };
+		73F8275B17A9B4CE00CC48F2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F8275A17A9B4CE00CC48F2 /* Default.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -118,6 +121,9 @@
 		73F8275017A9AFF400CC48F2 /* logo-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-icon-57x57.png"; sourceTree = "<group>"; };
 		73F8275217A9B06A00CC48F2 /* logo-icon-144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-icon-144x144.png"; sourceTree = "<group>"; };
 		73F8275417A9B07000CC48F2 /* logo-icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-icon-72x72.png"; sourceTree = "<group>"; };
+		73F8275617A9B4BD00CC48F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		73F8275817A9B4C800CC48F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		73F8275A17A9B4CE00CC48F2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* tadl-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "tadl-Info.plist"; path = "../tadl-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = tadl/config.xml; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				73F8275A17A9B4CE00CC48F2 /* Default.png */,
+				73F8275817A9B4C800CC48F2 /* Default-568h@2x.png */,
+				73F8275617A9B4BD00CC48F2 /* Default@2x.png */,
 				73F8275417A9B07000CC48F2 /* logo-icon-72x72.png */,
 				73F8275217A9B06A00CC48F2 /* logo-icon-144x144.png */,
 				73F8275017A9AFF400CC48F2 /* logo-icon-57x57.png */,
@@ -414,6 +423,9 @@
 				73F8275117A9AFF400CC48F2 /* logo-icon-57x57.png in Resources */,
 				73F8275317A9B06A00CC48F2 /* logo-icon-144x144.png in Resources */,
 				73F8275517A9B07000CC48F2 /* logo-icon-72x72.png in Resources */,
+				73F8275717A9B4BD00CC48F2 /* Default@2x.png in Resources */,
+				73F8275917A9B4C800CC48F2 /* Default-568h@2x.png in Resources */,
+				73F8275B17A9B4CE00CC48F2 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
