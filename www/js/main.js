@@ -516,7 +516,7 @@ function showmain() {
     var action = {action:"showmain"}
     History.pushState(action,  psTitle + "Search and Explore", "");
     state = History.getState();
-    $('.mainlinks').html('<a onclick="showfeatured();" class="button">Featured</a><br/><a onclick="showlocations();" class="button">Locations</a><br/><a onclick="showevents();" class="button">Events</a><br/><a onclick="facebookfeed();" class="button">Facebook</a><br/><a class="button" href="http://www.tadl.org/?nomobi=true" target="_system">Full Site</a>');
+    $('.mainlinks').html('<a onclick="showfeatured();" class="button">Featured</a><br/><a onclick="showlocations();" class="button">Locations</a><br/><a onclick="showevents();" class="button">Events</a><br/><a onclick="facebookfeed();" class="button">Facebook</a><br/><a class="button" href="http://www.tadl.org/?nomobi=true" onclick="window.open(this.href,\'_system\'); return false;">Full Site</a>');
     $('#results').show();
     setTimeout(login,1000);
 }
@@ -552,9 +552,9 @@ function linkify(inputText, options) {
     this.options = $.extend(this.options, options);
     inputText = inputText.replace(/\u200B/g, "");
     var replacePattern1 = /(src="|href="|">|\s>)?(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;ï]*[-A-Z0-9+&@#\/%=~_|ï]/gim;
-    var replacedText = inputText.replace(replacePattern1, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="' + $0 + '?nomobi=true" target="_system">'+ $0.trunc(32) + '</a>';});
+    var replacedText = inputText.replace(replacePattern1, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="' + $0 + '?nomobi=true" onclick="window.open(this.href,\'_system\'); return false;">'+ $0.trunc(32) + '</a>';});
     var replacePattern2 = /(src="|href="|">|\s>|https?:\/\/|ftp:\/\/)?www\.[-A-Z0-9+&@#\/%?=~_|!:,.;ï]*[-A-Z0-9+&@#\/%=~_|ï]/gim;
-    var replacedText = replacedText.replace(replacePattern2, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="http://' + $0 + '?nomobi=true" target="_system">'+ $0.trunc(32) + '</a>';});
+    var replacedText = replacedText.replace(replacePattern2, function($0,$1){ return $1?$0:'<br/><a class="'+ this.options.linkClass + '" href="http://' + $0 + '?nomobi=true" onclick="window.open(this.href,\'_system\'); return false;">'+ $0.trunc(32) + '</a>';});
     return replacedText;
 }
 
