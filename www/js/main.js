@@ -149,6 +149,7 @@ function showmore(record_id) {
 }
 
 function showfeatured() {
+    $(window).scrollTop(0);
     cleanhouse();
     $('#search-params').empty();
     var action = {action:"showfeatured"}
@@ -172,6 +173,7 @@ function showfeatured() {
 }
 
 function viewitem(record_id) {
+    $(window).scrollTop(0);
     cleanhouse();
     var action = {action:"viewitem", record_id:record_id}
     History.pushState(action, 'Featured Item ' + record_id, 'item');
@@ -345,6 +347,7 @@ function render_dash(data) {
 }
 
 function showcheckouts() { 
+    $(window).scrollTop(0);
     cleanhouse();
     var action = {action:"showcheckouts"}
     History.pushState(action, "Your Checkedout Items", "checkout");   
@@ -384,6 +387,7 @@ function cancelhold(hold_id) {
 }
 
 function showholds() {
+    $(window).scrollTop(0);
     cleanhouse();
     var action = {action:"showholds"}
     History.pushState(action, "Your Holds", "holds"); 
@@ -404,6 +408,7 @@ function showholds() {
 }
 
 function showpickups() {
+    $(window).scrollTop(0);
     cleanhouse();
     var action = {action:"showpickups"}
     History.pushState(action, "Ready for Pickup", "pickup"); 
@@ -455,6 +460,7 @@ function getsearch(query, mt, avail, location) {
 }
 
 function showcard() {
+    $(window).scrollTop(0);
     cleanhouse();
     var action = {action:"showcard"}
     History.pushState(action, "Your Card", "card"); 
@@ -474,8 +480,8 @@ function showcard() {
 }
 
 function showevents() { 
-    cleanhouse();
     $(window).scrollTop(0);
+    cleanhouse();
     var action = {action:"showevents"}
     History.pushState(action, "Upcoming Event", "events"); 
     state = History.getState();
@@ -492,8 +498,8 @@ function showevents() {
 }
 
 function showlocations() { 
-    cleanhouse();
     $(window).scrollTop(0);
+    cleanhouse();
     var action = {action:"showlocations"}
     History.pushState(action, "Locations", "locations"); 
     state = History.getState();
@@ -510,8 +516,8 @@ function showlocations() {
 }
 
 function showmain() {
-    cleanhouse();
     $(window).scrollTop(0);
+    cleanhouse();
     $('#results').html('<div id="mainpage"><div class="mainlogo"><img class="homelogo" src="img/clean-logo-header.png" alt="" /></div><div class="clearfix"></div><div class="mainlinks"></div><div class="clearfix"></div></div>');
     var action = {action:"showmain"}
     History.pushState(action,  psTitle + "Search and Explore", "");
@@ -522,8 +528,8 @@ function showmain() {
 }
 
 function facebookfeed() { 
-    cleanhouse();
     $(window).scrollTop(0);
+    cleanhouse();
     var action = {action:"facebookfeed"}
     History.pushState(action, "Facebook Feed", "facebook"); 
     state = History.getState();
