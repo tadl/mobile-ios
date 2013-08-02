@@ -325,7 +325,7 @@ function login_and_fetch_dash(username, password) {
         }
         $.getJSON(ILSCATCHER_BASE + '/main/login.json?u='+ username +'&pw=' + password, function(data) {
             if (data['status'] == 'error') {
-                $("#login_form").html('Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login" onclick="login()">Login</button><span id="login_msg"></span>');
+                $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login" onclick="login()">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
     			window.localStorage.clear();
                 $('#login_msg').html('Error logging in.');
             } else {

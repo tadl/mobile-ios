@@ -172,10 +172,13 @@ router
     </section>
   
     <div id="login_form">
+        <form>
         Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br />
         Password: <input type="password" id="pword" /><br />
         <button id="login" onclick="login()">Login</button>
+        <input type="submit" value="Go" style="display:none;" />
         <span id="login_msg"></span>
+        </form>
     </div>
 </header>
 
