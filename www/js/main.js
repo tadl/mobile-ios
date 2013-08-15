@@ -24,7 +24,15 @@ $(document).ready(function() {
     $('#login_form').keydown(function(event) {
         if (event.keyCode == 13) { login(); }
     });
-    $('#search').click(getResults);
+    $('#search').click(function(event) {
+        event.preventDefault();
+        getResults();
+    });
+    $('#ssettings').click(function(event) {
+        event.preventDefault();
+        openSearch_options();
+    });
+    init_login_onclick();
     $(document).on('focus', 'input', function() {
         $('header').css('position', 'absolute');
     });
@@ -35,6 +43,13 @@ $(document).ready(function() {
         }, 100);
     });
 });
+
+function init_login_onclick() {
+    $('#login').click(function(event) {
+        event.preventDefault();
+        login();
+    });
+}
 
 function checkstatus() {
     $.get(ILSCATCHER_INSECURE_BASE + "/main/checkupdates.json?version_id=" + version_id + "&platform=" + platform, function(data) {
@@ -121,7 +136,8 @@ function logged_in() {
 }
 
 function logout() {
-    $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login" onclick="login()">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+    $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+    init_login_onclick();
     window.localStorage.clear();
     showmain();    
 }
@@ -325,7 +341,8 @@ function login_and_fetch_dash(username, password) {
         }
         $.getJSON(ILSCATCHER_BASE + '/main/login.json?u='+ username +'&pw=' + password, function(data) {
             if (data['status'] == 'error') {
-                $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login" onclick="login()">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+                $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+                init_login_onclick();
     			window.localStorage.clear();
                 $('#login_msg').html('Error logging in.');
             } else {
@@ -334,7 +351,8 @@ function login_and_fetch_dash(username, password) {
             }
         });
     } else {
-        $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login" onclick="login()">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+        $("#login_form").html('<form>Username: <input type="text" id="username" autocorrect="off" autocapitalize="off" /><br /> Password: <input type="password" id="pword" /><br /><button id="login">Login</button><input type="submit" value="Go" style="display:none;" /><span id="login_msg"></span></form>');
+        init_login_onclick();
         window.localStorage.clear();
     }
 }
