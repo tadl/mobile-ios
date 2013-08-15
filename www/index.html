@@ -422,7 +422,7 @@ router
                         <span style="font-size:13px; font-style:italic;">{{description}}</span><br/>
                         {{#if caption}}
                             {{#if link}}
-                                <a href="{{link}}" style="font-decoration: none; font-size: 12px;">See More</a>
+                                <a href="{{link}}" onclick="window.open(this.href,'_system'); return false;" style="font-decoration: none; font-size: 12px;">See More</a>
                             {{/if}}
                         {{/if}}
                         <span id="{{node.nid}}" style="display:none;">{{node.body}}</span>
