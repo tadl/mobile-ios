@@ -35,10 +35,11 @@ $(document).ready(function() {
     init_login_onclick();
     $(document).on('focus', 'input', function() {
         $('header').css('position', 'absolute');
+        $(document).scrollTop(0);
     });
     $(document).on('blur', 'input', function() {
+        $('header').css('position', 'fixed');
         setTimeout(function() {
-            $('header').css('position', 'fixed');
             $('body').css('height', '+=1').css('height', '-=1');
         }, 100);
     });
